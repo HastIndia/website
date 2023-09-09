@@ -2,11 +2,15 @@ import React from "react";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import {
+  createUserWithEmailAndPassword,
+} from "firebase/auth";
+import {auth} from '../firebaseconfig';
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate=useNavigate();
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -15,12 +19,20 @@ const Login = () => {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle login logic here (e.g., send a request to a server).
-    console.log(`Email: ${email}, Password: ${password}`);
+const signIn=()=>{
+  createUserWithEmailAndPassword(auth, email, password)
+      .then(() => {
+        console.log("user signed in");
+        setTimeout(() => {
+          navigate("/");
+        }, 3000);
+      })
+      .catch((error) => {
+       
+        console.log(error);
+      });
   };
+  
   return (
     <>
       <Header />
@@ -31,7 +43,7 @@ const Login = () => {
               Sign in to your account
             </h2>
           </div>
-          <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+          {/* <form className="mt-8 space-y-6" > */}
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
                 <label htmlFor="email-address" className="sr-only">
@@ -66,16 +78,16 @@ const Login = () => {
             </div>
 
             <div>
-              <Link to="/">
+              
                 <button
-                  type="submit"
+                  onClick={signIn}
                   className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Sign In
                 </button>
-              </Link>
+              
             </div>
-          </form>
+          {/* </form> */}
         </div>
       </div>
       <Footer />

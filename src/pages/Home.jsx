@@ -1,6 +1,8 @@
-import React from "react";
-
+import { onAuthStateChanged } from "firebase/auth";
+import React, { useEffect, useState } from "react";
+import {auth} from '../firebaseconfig';
 const Home = () => {
+  
   return (
     <>
       <section className="text-gray-600 body-font">

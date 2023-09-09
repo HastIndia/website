@@ -1,7 +1,32 @@
-import React from "react";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { auth } from "../firebaseconfig";
 
 const Header = () => {
+  const [isloggedin,setIsLoggedIn]=useState(false);
+  const userSignOut = () => {
+    signOut(auth)
+      .then(() => {
+        console.log("sign out successful");
+        setIsLoggedIn(false);
+      })
+      .catch((error) => console.log(error));
+  };
+  useEffect(() => {
+    const listen = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        console.log("Yes");
+        setIsLoggedIn(true);
+      } else {
+        console.log("No");
+      }
+    });
+
+    return () => {
+      listen();
+    };
+  }, []);
   return (
     <header className="text-gray-600 body-font">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -25,7 +50,7 @@ const Header = () => {
           <Link to="/cart" className="mr-5 hover:text-gray-900">Cart</Link>
           <Link to="/contactus" className="mr-5 hover:text-gray-900">Contact Us</Link>
           <Link to="/payment" className="mr-5 hover:text-gray-900">Payment</Link>
-          <Link to="/login" className="mr-5 hover:text-gray-900">Login</Link>
+          {isloggedin?<p onClick={userSignOut}>logout</p>:<Link to="/login" className="mr-5 hover:text-gray-900">Login</Link>}
         </nav>
         <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
           Button
