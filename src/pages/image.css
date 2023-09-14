@@ -1,23 +1,8 @@
-.CustomBg {
-  background-image: url("../assets/bg.jpg");
+.HomeBg {
+  background-image: url("../assets/homebg.jpg");
   height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.CustomBgContact {
-  background-image: url("../assets/contactbg.png");
-  height: 100vh;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.CustomBgPayment {
-  background-image: url("../assets/paymentbg.png");
-  height: 100vh;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center;
 }
