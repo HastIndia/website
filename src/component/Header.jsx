@@ -1,8 +1,9 @@
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../firebaseconfig";
 import { BsBugFill } from "react-icons/bs";
+import BtnEffect from "./BtnEffect";
 
 const Header = () => {
   const [isloggedin, setIsLoggedIn] = useState(false);
@@ -35,23 +36,23 @@ const Header = () => {
           <BsBugFill />
         </a>
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-          <Link to="/" className="mr-5 hover:text-white">
-            Home
+          <Link to="/" className="mr-5">
+            <BtnEffect link="Home" />
           </Link>
-          <Link to="/cart" className="mr-5 hover:text-white">
-            Cart
+          <Link to="/cart" className="mr-5">
+            <BtnEffect link="Cart" />
           </Link>
-          <Link to="/contactus" className="mr-5 hover:text-white">
-            Contact Us
+          <Link to="/contactus" className="mr-5">
+            <BtnEffect link="Contact Us" />
           </Link>
-          <Link to="/payment" className="mr-5 hover:text-white">
-            Payment
+          <Link to="/payment" className="mr-5">
+            <BtnEffect link="Payment" />
           </Link>
           {isloggedin ? (
             <p onClick={userSignOut}>logout</p>
           ) : (
-            <Link to="/login" className="mr-5 hover:text-white">
-              Login
+            <Link to="/login" className="mr-5">
+              <BtnEffect link="Login" />
             </Link>
           )}
         </nav>
