@@ -62,8 +62,10 @@ const Home = () => {
                     className="w-full object-cover h-full object-center block opacity-70"
                     src={art2}
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-[#037964] bg-opacity-60 text-white text-2xl font-bold">
-                    Comming Scoon
+                  <div className="absolute inset-0 flex items-center justify-center bg-opacity-60 text-white text-2xl font-bold">
+                  <div className="flex justify-center align-middle">
+                  Comming Soon
+                  </div>
                   </div>
                 </div>
               </div>
@@ -74,7 +76,7 @@ const Home = () => {
                     className="w-full object-cover h-full object-center block opacity-70"
                     src={art3}
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-[#037964] bg-opacity-60 text-white text-2xl font-bold">
+                  <div className="absolute inset-0 flex items-center justify-center bg-opacity-60 text-white text-2xl font-bold">
                     Comming Scoon
                   </div>
                 </div>
@@ -86,7 +88,7 @@ const Home = () => {
                     className="w-full h-full object-cover object-center block opacity-70"
                     src={art4}
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-[#037964] bg-opacity-60 text-white text-2xl font-bold">
+                  <div className="absolute inset-0 flex items-center justify-center bg-opacity-60 text-white text-2xl font-bold">
                     Comming Scoon
                   </div>
                 </div>
@@ -100,7 +102,7 @@ const Home = () => {
                     className="w-full h-full object-cover object-center block opacity-70"
                     src={art4}
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-[#037964] bg-opacity-60 text-white text-2xl font-bold">
+                  <div className="absolute inset-0 flex items-center justify-center bg-opacity-60 text-white text-2xl font-bold">
                     Comming Scoon
                   </div>
                 </div>
@@ -112,7 +114,7 @@ const Home = () => {
                     className="w-full object-cover h-full object-center block opacity-70"
                     src={art2}
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-[#037964] bg-opacity-60 text-white text-2xl font-bold">
+                  <div className="absolute inset-0 flex items-center justify-center bg-opacity-60 text-white text-2xl font-bold">
                     Comming Scoon
                   </div>
                 </div>
@@ -124,7 +126,7 @@ const Home = () => {
                     className="w-full object-cover h-full object-center block opacity-70"
                     src={art2}
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-[#037964] bg-opacity-60 text-white text-2xl font-bold">
+                  <div className="absolute inset-0 flex items-center justify-center bg-opacity-60 text-white text-2xl font-bold">
                     Comming Scoon
                   </div>
                 </div>

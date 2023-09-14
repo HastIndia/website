@@ -6,7 +6,7 @@ const ContactUs = () => {
   return (
     <>
       <Header />
-      <h1>Contact Us Page</h1>
+      <div className="CustomBgContact"></div>
       <Footer />
     </>
   );

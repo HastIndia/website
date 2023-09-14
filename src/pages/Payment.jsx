@@ -6,7 +6,7 @@ const Payment = () => {
   return (
     <>
       <Header />
-      <h1>Payment page</h1>
+      <div className="CustomBgPayment"></div>
       <Footer />
     </>
   );

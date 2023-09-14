@@ -3,10 +3,5 @@
 @tailwind utilities;
 
 body {
-  background: rgb(240, 208, 184);
-  background: linear-gradient(
-    180deg,
-    rgba(240, 208, 184, 1) 23%,
-    rgba(193, 181, 181, 1) 100%
-  );
+  background: #f8e6db;
 }
