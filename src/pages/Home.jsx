@@ -26,6 +26,10 @@ const Home = () => {
           </a>
         </div>
       </div>
+      <div className="bg-[#276974] py-7 flex flex-col justify-center items-center text-white text-3xl gap-2 md:flex-row">
+        <p>Product Catalog </p>
+        <p> Coming Soon...</p>
+      </div>
     </>
   );
 };

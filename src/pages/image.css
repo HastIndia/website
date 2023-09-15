@@ -1,6 +1,6 @@
 .HomeBg {
-  background-image: url("../assets/homebg.jpg");
-  height: 100vh;
+  background-image: url("../assets/home.png");
+  height: 550px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
